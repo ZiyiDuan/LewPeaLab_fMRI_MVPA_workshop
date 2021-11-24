@@ -1,0 +1,25 @@
+fMRI analysis procedure for #clearmen project
+
+
+# Build a classifier for pictures
+1. Use whole brain data in functional localizer task to build a classifier to distinguish three categories (face, scene, fruit) within-subject. 
+The average classifier acc would be around 50%
+
+2. Build up a mask to get the VVS ROI, and use data from mask to build a classifier. We can use 'FSL-math' to help.
+The average classifier acc would be around 75%. Fig. 3. a
+
+3. Use whole brain data to build a classifier to distinguish nine subcategories (faces (actor/, musician, /politician), fruit (apple, grape, pear), and scenes (beach, bridge, mountain)). Fig. 3. a
+
+4. Test your classifier in the study task and get the time course of the classification evidence for different category. Fig. 4.a. & b.
+
+
+# Build a classifier for operations
+5. Use data in study task during the operation and fixation time period to build a classifier to distinguish different operations. Fig. 2.a. 
+
+
+# item-level RSA analysis
+
+
+
+# fMRI preprocessing
+DICOM (dcm zniix) ==> NII.GZ (dcmzbids)==> BIDS (fMRIPrep) ==> BIDS with preprocessed data
